@@ -1,9 +1,9 @@
 /* ============================================================
-   Obra de Cora · comportamento da página
+   Cumeeira (demonstração) · comportamento da página
    O scroll manda em três coisas: a casa 3D do topo (cena.js), a frase
-   do propósito que acende palavra por palavra e a galeria da Mansão
-   Costa Verde, que anda de lado. O resto é filtro, visor de fotos,
-   comparador e o formulário que abre o WhatsApp.
+   do propósito que acende palavra por palavra e a galeria da Casa do
+   Pátio, que anda de lado. O resto é filtro, visor de fotos,
+   comparador e o formulário, que aqui só mostra a mensagem.
    ============================================================ */
 (() => {
 'use strict';
@@ -14,7 +14,6 @@ const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const janela = (t, a, b) => clamp((t - a) / (b - a));
 const REDUZIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const raiz = document.documentElement;
-const ZAP = '5521983608787';
 
 /* ---------- a casa que sobe ---------- */
 const constr = $('#inicio');
@@ -213,7 +212,7 @@ function servAtualiza() {
   if (melhor !== servAtual) servico(melhor);
 }
 
-/* ---------- Mansão Costa Verde: scroll vertical vira horizontal ---------- */
+/* ---------- Casa do Pátio: scroll vertical vira horizontal ---------- */
 const mansao = $('#mansao');
 const faixa = $('#mansaoFaixa');
 let mansaoSobra = 0, mansaoDedo = false;
@@ -248,12 +247,14 @@ if ('IntersectionObserver' in window) {
   io.observe(mansao);
 }
 
-/* ---------- comparador: projeto x entrega ---------- */
+/* ---------- comparador: desenho x entrega ----------
+   O desenho é tirado da própria foto (ver briefing.md), por isso os
+   dois lados têm exatamente o mesmo enquadramento. */
 const compara = $('#compara');
 const compRange = $('#compRange');
 const PARES = {
-  1: ['img/obras/nutri-projeto-1.webp', 'Consultório no projeto 3D', 'img/obras/nutri-entregue-1.webp', 'Consultório entregue, em foto'],
-  2: ['img/obras/nutri-projeto-2.webp', 'Recepção no projeto 3D', 'img/obras/nutri-entregue-2.webp', 'Recepção entregue, em foto']
+  1: ['img/obras/escritorio-1-traco.webp', 'Sala de reunião no desenho do projeto', 'img/obras/escritorio-1.webp', 'Sala de reunião entregue, em foto'],
+  2: ['img/obras/escritorio-2-traco.webp', 'Circulação e copa no desenho do projeto', 'img/obras/escritorio-2.webp', 'Circulação e copa entregues, em foto']
 };
 const compPoe = v => compara.style.setProperty('--p', v + '%');
 /* O arrasto é feito aqui e não pelo range, porque no celular o range só
@@ -320,33 +321,31 @@ casaMinis.forEach((b, i) => b.addEventListener('click', () => {
 }));
 
 /* ---------- portfólio ----------
-   [id, categoria, largura e altura da miniatura, tipo]
+   [número do arquivo, categoria, largura e altura da miniatura, tipo]
    tipo p = imagem do projeto 3D, f = foto de obra entregue */
 const CATS = [
   ['todos', 'Todos'], ['fachada', 'Fachada'], ['sala', 'Sala'], ['cozinha', 'Cozinha'],
-  ['quarto', 'Quarto'], ['banheiro', 'Banheiro'], ['gourmet', 'Área gourmet'],
+  ['quarto', 'Quarto'], ['banheiro', 'Banheiro'], ['externa', 'Área externa'],
   ['office', 'Home office'], ['comercial', 'Comercial'], ['pronta', 'Obra pronta']
 ];
 const NOME = Object.fromEntries(CATS);
 const PORT = [
-  [519, 'fachada', 760, 428, 'p'], [551, 'fachada', 760, 428, 'p'], [516, 'fachada', 760, 428, 'p'],
-  [521, 'fachada', 760, 570, 'p'], [1016, 'fachada', 760, 760, 'p'], [540, 'fachada', 760, 760, 'p'],
-  [250, 'sala', 760, 424, 'p'], [312, 'sala', 760, 760, 'p'], [326, 'sala', 760, 760, 'p'],
-  [248, 'sala', 760, 428, 'p'], [299, 'sala', 760, 760, 'p'], [321, 'sala', 760, 760, 'p'],
-  [572, 'cozinha', 760, 424, 'p'], [577, 'cozinha', 760, 760, 'p'], [604, 'cozinha', 760, 570, 'p'],
-  [607, 'cozinha', 760, 760, 'p'], [586, 'cozinha', 760, 428, 'p'], [585, 'cozinha', 760, 760, 'p'],
-  [403, 'quarto', 760, 426, 'p'], [450, 'quarto', 760, 760, 'p'], [498, 'quarto', 760, 760, 'p'],
-  [412, 'quarto', 760, 570, 'p'], [491, 'quarto', 760, 428, 'p'], [1312, 'quarto', 760, 570, 'f'],
-  [752, 'banheiro', 760, 760, 'p'], [773, 'banheiro', 760, 760, 'p'], [775, 'banheiro', 760, 760, 'p'],
-  [754, 'banheiro', 606, 760, 'p'], [796, 'banheiro', 436, 760, 'p'], [1246, 'banheiro', 570, 760, 'f'],
-  [810, 'gourmet', 760, 428, 'p'], [806, 'gourmet', 760, 506, 'p'], [811, 'gourmet', 760, 570, 'p'],
-  [834, 'gourmet', 608, 760, 'p'], [835, 'gourmet', 760, 592, 'p'], [825, 'gourmet', 760, 760, 'p'],
-  [350, 'office', 760, 518, 'p'], [352, 'office', 760, 760, 'p'], [356, 'office', 760, 570, 'p'], [378, 'office', 760, 570, 'p'],
-  [704, 'comercial', 760, 428, 'p'], [686, 'comercial', 760, 380, 'p'], [680, 'comercial', 760, 608, 'p'],
-  [671, 'comercial', 760, 334, 'p'], [693, 'comercial', 760, 608, 'p'], [1046, 'comercial', 760, 742, 'f'],
-  [1189, 'pronta', 570, 760, 'f'], [1192, 'pronta', 570, 760, 'f'], [1202, 'pronta', 570, 760, 'f'],
-  [1273, 'pronta', 760, 570, 'f'], [1296, 'pronta', 570, 760, 'f'], [1240, 'pronta', 570, 760, 'f'],
-  [1247, 'pronta', 570, 760, 'f'], [1284, 'pronta', 570, 760, 'f']
+  [1, 'fachada', 760, 570, 'f'], [2, 'fachada', 760, 505, 'f'], [3, 'fachada', 760, 507, 'f'],
+  [4, 'fachada', 760, 638, 'f'], [5, 'fachada', 760, 507, 'f'], [6, 'fachada', 760, 507, 'f'],
+  [7, 'sala', 760, 429, 'p'], [8, 'sala', 760, 760, 'p'], [9, 'sala', 760, 429, 'p'],
+  [10, 'sala', 760, 429, 'p'], [11, 'sala', 760, 401, 'p'], [12, 'sala', 760, 557, 'p'],
+  [13, 'sala', 760, 507, 'f'], [14, 'sala', 760, 507, 'f'], [15, 'cozinha', 760, 505, 'f'],
+  [16, 'cozinha', 760, 502, 'f'], [17, 'cozinha', 760, 507, 'f'], [18, 'cozinha', 760, 507, 'f'],
+  [19, 'cozinha', 570, 760, 'f'], [20, 'cozinha', 760, 526, 'f'], [21, 'quarto', 760, 760, 'p'],
+  [22, 'quarto', 760, 760, 'p'], [23, 'quarto', 760, 483, 'p'], [24, 'quarto', 760, 507, 'f'],
+  [25, 'quarto', 760, 507, 'f'], [26, 'quarto', 760, 515, 'f'], [27, 'banheiro', 760, 507, 'f'],
+  [28, 'banheiro', 760, 517, 'f'], [29, 'banheiro', 570, 760, 'p'], [30, 'banheiro', 760, 507, 'f'],
+  [31, 'banheiro', 760, 507, 'f'], [32, 'banheiro', 760, 507, 'f'], [33, 'externa', 760, 507, 'f'],
+  [34, 'externa', 760, 507, 'f'], [35, 'externa', 760, 507, 'f'], [36, 'externa', 760, 507, 'f'],
+  [37, 'externa', 760, 760, 'p'], [38, 'externa', 760, 507, 'f'], [39, 'office', 760, 570, 'p'],
+  [40, 'office', 570, 760, 'f'], [41, 'office', 760, 507, 'f'], [42, 'office', 570, 760, 'f'],
+  [43, 'comercial', 760, 507, 'f'], [44, 'comercial', 760, 507, 'f'], [45, 'comercial', 760, 570, 'f'],
+  [46, 'comercial', 760, 429, 'f'], [47, 'comercial', 760, 507, 'f'], [48, 'comercial', 760, 509, 'f']
 ].map(([id, cat, w, h, tipo]) => ({ id, cat, w, h, tipo }));
 
 /* em "Todos" os ambientes vêm alternados, senão seriam seis fachadas seguidas */
@@ -489,8 +488,12 @@ function avalBotoes() {
 trilho.addEventListener('scroll', avalBotoes, { passive: true });
 avalBotoes();
 
-/* ---------- formulário: monta a mensagem e abre o WhatsApp ---------- */
-const form = $('#form'), formErro = $('#formErro');
+/* ---------- formulário: monta a mensagem ----------
+   Num site publicado isso abre o WhatsApp da empresa. Aqui a empresa
+   não existe, então a mensagem aparece na tela e nada sai do navegador.
+   Pra ligar de verdade, trocar o bloco da prévia por
+   window.open('https://wa.me/55DDDNUMERO?text=' + encodeURIComponent(texto)) */
+const form = $('#form'), formErro = $('#formErro'), formPrevia = $('#formPrevia'), formMsg = $('#formMsg');
 form.addEventListener('submit', e => {
   e.preventDefault();
   const d = new FormData(form);
@@ -502,10 +505,13 @@ form.addEventListener('submit', e => {
   formErro.hidden = !primeiro;
   if (primeiro) { $(primeiro[0]).focus(); return; }
 
-  const linhas = ['Olá! Vim pelo site da Obra de Cora.', '', `*Nome:* ${nome}`, `*Telefone:* ${tel}`];
+  const linhas = ['Olá! Vim pelo site da Cumeeira.', '', `*Nome:* ${nome}`, `*Telefone:* ${tel}`];
   const extra = [['E-mail', d.get('email')], ['Local do imóvel', d.get('local')], ['O que desejo fazer', d.getAll('desejo').join(', ')], ['Mensagem', d.get('mensagem')]];
   for (const [rot, v] of extra) if (v && String(v).trim()) linhas.push(`*${rot}:* ${String(v).trim()}`);
-  window.open(`https://wa.me/${ZAP}?text=${encodeURIComponent(linhas.join('\n'))}`, '_blank', 'noopener');
+  /* os asteriscos são o negrito do WhatsApp, na prévia não servem pra nada */
+  formMsg.textContent = linhas.join('\n').replace(/\*/g, '');
+  formPrevia.hidden = false;
+  formPrevia.scrollIntoView({ block: 'nearest', behavior: REDUZIDO ? 'auto' : 'smooth' });
 });
 $$('#fNome, #fTel').forEach(el => el.addEventListener('input', () => { el.classList.remove('erro'); formErro.hidden = true; }));
 
