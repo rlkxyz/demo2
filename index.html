@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Obra de Cora · Arquitetura, obra e interiores no Rio de Janeiro</title>
+<meta name="description" content="Projeto arquitetônico, obra e design de interiores com uma única equipe. Atendimento no Rio de Janeiro: Zona Sul, Barra da Tijuca e Recreio.">
+<!-- prévia pra mostrar pra empresa: fora do Google até eles aprovarem. Tirar essa linha quando virar cliente. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b0a08">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Obra de Cora · Do projeto à execução, a mesma equipe">
+<meta property="og:description" content="Você só precisa aprovar o projeto. O restante é por nossa conta.">
+<meta property="og:image" content="img/marca/capa.jpg">
+<link rel="icon" href="img/marca/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/marca/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:wght@400..600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:wght@400..600&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="pular" href="#manifesto">Pular para o conteúdo</a>
+
+<!-- ============ TOPO ============ -->
+<header class="topo" id="topo">
+  <a class="marca" href="#inicio" aria-label="Obra de Cora, voltar ao início">
+    <img class="marca-icone" src="img/marca/icone.webp" alt="" width="1054" height="490">
+    <img class="marca-nome" src="img/marca/logotipo.webp" alt="Obra de Cora" width="710" height="88">
+  </a>
+  <nav class="menu" id="menu" aria-label="Principal">
+    <a href="#servicos">Serviços</a>
+    <a href="#obras">Obras</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn-ouro menu-cta" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicite seu orçamento</a>
+  </nav>
+  <a class="btn btn-linha topo-cta" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicite seu orçamento</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+</header>
+
+<main>
+
+<!-- ============ A CASA QUE SOBE ============
+     A seção é alta e o palco fica preso na tela. O scroll vira o tempo
+     da obra: planta, estrutura, alvenaria, acabamento. -->
+<section class="constr" id="inicio" aria-label="Do projeto à execução">
+  <div class="constr-palco" id="palco">
+
+    <div class="constr-cena">
+      <canvas id="cena" aria-hidden="true"></canvas>
+      <div class="constr-rotulos" id="rotulos" aria-hidden="true"></div>
+      <div class="constr-veu" aria-hidden="true"></div>
+    </div>
+
+    <div class="constr-texto">
+      <div class="hero" id="hero">
+        <p class="sobrelinha">Arquitetura · Construção · Reforma <span>Rio de Janeiro</span></p>
+        <h1>Do projeto à execução, <em>a mesma equipe.</em></h1>
+        <p class="hero-sub">Você só precisa aprovar o projeto. O restante é por nossa conta.</p>
+        <div class="hero-acoes">
+          <a class="btn btn-ouro" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicite seu orçamento <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-texto" href="#obras">Ver obras entregues</a>
+        </div>
+      </div>
+
+      <ol class="etapas" id="etapas">
+        <li class="etapa" data-de="0.075" data-ate="0.19">
+          <p class="etapa-num"><b>01</b> Projeto</p>
+          <h2>Tudo começa <em>no traço.</em></h2>
+          <p>Projeto de arquitetura e interiores, com criação personalizada, estética e funcional. A gente ouve a sua história antes de desenhar qualquer coisa.</p>
+        </li>
+        <li class="etapa" data-de="0.215" data-ate="0.44">
+          <p class="etapa-num"><b>02</b> Engenharia</p>
+          <h2>O que ninguém vê, <em>calculado.</em></h2>
+          <p>Estrutural, elétrico e hidrossanitário feitos pela mesma equipe que desenhou a casa. Nada se perde entre o projeto e o canteiro.</p>
+          <ul class="legenda" aria-hidden="true">
+            <li class="l-est">Estrutural</li>
+            <li class="l-ele">Elétrico</li>
+            <li class="l-hid">Hidrossanitário</li>
+          </ul>
+        </li>
+        <li class="etapa" data-de="0.465" data-ate="0.7">
+          <p class="etapa-num"><b>03</b> Obra</p>
+          <h2>Equipe própria <em>no canteiro.</em></h2>
+          <p>Execução completa, com fornecimento de material, gestão e acompanhamento. Planejamento, cronograma e controle de custos do começo ao fim.</p>
+        </li>
+        <li class="etapa" data-de="0.73" data-ate="0.905">
+          <p class="etapa-num"><b>04</b> Interiores</p>
+          <h2>Marcenaria, luz e <em>chave na mão.</em></h2>
+          <p>Móveis planejados e acabamento sob medida. Da primeira ideia à entrega das chaves, cuidamos de tudo para você.</p>
+        </li>
+        <li class="etapa etapa-fim" data-de="0.93" data-ate="2">
+          <p class="etapa-num">Tudo em um só lugar</p>
+          <h2>Cuidamos de cada etapa para você <em>não se preocupar com nada.</em></h2>
+          <a class="btn btn-ouro" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Fale com um especialista <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </li>
+      </ol>
+    </div>
+
+    <!-- régua da obra: onde a pessoa está entre a planta e a chave -->
+    <nav class="regua" id="regua" aria-label="Etapas da obra">
+      <i class="regua-fio"><i id="reguaCheio"></i></i>
+      <button type="button" data-ir="0.13"><b>01</b><span>Projeto</span></button>
+      <button type="button" data-ir="0.33"><b>02</b><span>Engenharia</span></button>
+      <button type="button" data-ir="0.59"><b>03</b><span>Obra</span></button>
+      <button type="button" data-ir="0.84"><b>04</b><span>Interiores</span></button>
+    </nav>
+
+    <!-- carimbo de prancha, como em desenho técnico -->
+    <div class="carimbo" id="carimbo" aria-hidden="true">
+      <div><small>Prancha</small><b id="carimboNum">01/04</b></div>
+      <div><small>Conteúdo</small><b id="carimboNome">Planta baixa · térreo</b></div>
+      <div><small>Escala</small><b>1:100</b></div>
+    </div>
+
+    <p class="constr-dica" id="dica" aria-hidden="true"><i></i>Role para construir</p>
+  </div>
+</section>
+
+<!-- ============ PROPÓSITO ============ -->
+<section class="sec papel manif" id="manifesto">
+  <header class="prancha"><b>01</b><span>Nosso propósito</span><i></i><span>Obra de Cora</span></header>
+  <p class="manif-frase" id="frase">Mais do que erguer paredes, criamos espaços que contam histórias, acolhem memórias e <em>traduzem quem você é.</em></p>
+  <div class="manif-base">
+    <p class="manif-apoio rev">Da concepção ao acabamento, nossa equipe garante qualidade, transparência e pontualidade em cada decisão. Você acompanha o processo, mas sem carregar o peso dele.</p>
+    <ul class="pilares rev">
+      <li><b>Qualidade</b><span>em cada detalhe da construção ou da reforma</span></li>
+      <li><b>Transparência</b><span>em cada decisão, do orçamento à entrega</span></li>
+      <li><b>Pontualidade</b><span>com planejamento e cronograma de verdade</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="sec serv" id="servicos">
+  <header class="prancha"><b>02</b><span>Serviços</span><i></i><span>Uma única equipe</span></header>
+  <div class="serv-topo">
+    <h2 class="titulo rev">Tudo o que sua obra precisa, <em>em um único lugar.</em></h2>
+    <p class="serv-intro rev">Projeto arquitetônico, obra e design de interiores com uma única equipe. Temos equipe própria e completa para a execução e fornecemos todo o material.</p>
+  </div>
+  <div class="serv-grade">
+    <div class="serv-vitrine" id="servVitrine" aria-hidden="true">
+      <img src="img/portfolio/250-s.webp" alt="" width="760" height="424" loading="lazy" class="ativa">
+      <img src="img/obras/casa-durante.webp" alt="" width="346" height="345" loading="lazy">
+      <img src="img/obras/casa-01-s.webp" alt="" width="570" height="760" loading="lazy">
+      <img src="img/obras/mansao-11-s.webp" srcset="img/obras/mansao-11-s.webp 570w, img/obras/mansao-11.webp 1126w" sizes="48vh" alt="" width="570" height="760" loading="lazy">
+      <img src="img/obras/casa-05-s.webp" alt="" width="570" height="760" loading="lazy">
+      <img src="img/obras/mansao-01-s.webp" srcset="img/obras/mansao-01-s.webp 570w, img/obras/mansao-01.webp 1126w" sizes="48vh" alt="" width="570" height="760" loading="lazy">
+      <span class="serv-vitrine-num" id="servNum">01</span>
+    </div>
+    <ul class="serv-lista" id="servLista">
+      <li class="ativa"><b>01</b><h3>Projeto de arquitetura e interiores</h3><p>Criação personalizada, estética e funcional.</p></li>
+      <li><b>02</b><h3>Projetos de engenharia</h3><p>Estrutural, elétrico e hidrossanitário para construir com segurança.</p></li>
+      <li><b>03</b><h3>Reformas e construções</h3><p>Execução completa com equipe própria e materiais de alta qualidade.</p></li>
+      <li><b>04</b><h3>Gerenciamento de obras</h3><p>Planejamento, cronograma e controle de custos.</p></li>
+      <li><b>05</b><h3>Móveis planejados</h3><p>Marcenaria sob medida, pensada junto com o projeto.</p></li>
+      <li><b>06</b><h3>Consultoria técnica e avaliação de imóvel</h3><p>Orientação especializada para quem busca segurança e clareza antes de comprar um imóvel ou iniciar uma obra.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ OBRAS ============ -->
+<section class="sec obras" id="obras">
+  <header class="prancha"><b>03</b><span>Obras entregues</span><i></i><span>Três histórias reais</span></header>
+  <h2 class="titulo rev">Do primeiro contato <em>à entrega.</em></h2>
+</section>
+
+<!-- Mansão Costa Verde: galeria que anda de lado enquanto a pessoa rola -->
+<section class="mansao" id="mansao" aria-labelledby="mansaoTit">
+  <div class="mansao-trilho">
+    <div class="mansao-faixa" id="mansaoFaixa">
+
+      <div class="m-capa">
+        <p class="sobrelinha">Obra 01 <span>Reforma completa</span></p>
+        <h3 id="mansaoTit">Mansão <em>Costa Verde</em></h3>
+        <p>Um imóvel antigo, em uma excelente localização. Antes de comprar, o cliente quis saber se valia o investimento. Ficamos com a obra inteira.</p>
+        <ul class="m-ficha">
+          <li>Consultoria</li><li>Projeto</li><li>Design</li><li>Obra</li><li>Marcenaria</li><li>Acompanhamento</li>
+        </ul>
+        <p class="m-dica" aria-hidden="true">Continue rolando <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-01.webp" data-leg="Mansão Costa Verde · piscina"><img src="img/obras/mansao-01-s.webp" srcset="img/obras/mansao-01-s.webp 570w, img/obras/mansao-01.webp 1126w" sizes="48vh" alt="Piscina com parede de madeira na Mansão Costa Verde" width="570" height="760" loading="lazy"></button>
+
+      <div class="m-cap"><b>01</b><h4>Consultoria</h4><p>No início, o cliente nos procurou para uma consultoria, desejando saber se um imóvel antigo, mas com uma excelente localização, valia a pena a compra e o investimento.</p></div>
+
+      <button class="m-foto baixa" type="button" data-lb="mansao" data-src="img/obras/mansao-02.webp" data-leg="Mansão Costa Verde · hall"><img src="img/obras/mansao-02-s.webp" srcset="img/obras/mansao-02-s.webp 570w, img/obras/mansao-02.webp 1126w" sizes="48vh" alt="Lustre de anéis sobre a escada" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-03.webp" data-leg="Mansão Costa Verde · escada"><img src="img/obras/mansao-03-s.webp" srcset="img/obras/mansao-03-s.webp 570w, img/obras/mansao-03.webp 1126w" sizes="48vh" alt="Escada com guarda-corpo de vidro" width="570" height="760" loading="lazy"></button>
+
+      <div class="m-cap"><b>02</b><h4>Viabilidade</h4><p>A consultoria foi realizada pela equipe da Obra de Cora, que constatou que o imóvel era viável para o propósito do cliente.</p></div>
+
+      <button class="m-foto larga" type="button" data-lb="mansao" data-src="img/obras/mansao-12.webp" data-leg="Mansão Costa Verde · área externa"><img src="img/obras/mansao-12-s.webp" srcset="img/obras/mansao-12-s.webp 760w, img/obras/mansao-12.webp 1500w" sizes="80vh" alt="Área externa com deck e piscina" width="760" height="570" loading="lazy"></button>
+
+      <div class="m-cap"><b>03</b><h4>Projeto</h4><p>Após a consultoria, o cliente adquiriu o imóvel e contratou o projeto de arquitetura e interiores da Obra de Cora.</p></div>
+
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-04.webp" data-leg="Mansão Costa Verde · cozinha"><img src="img/obras/mansao-04-s.webp" srcset="img/obras/mansao-04-s.webp 570w, img/obras/mansao-04.webp 1126w" sizes="48vh" alt="Cozinha com armários verdes e parede de madeira" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto baixa" type="button" data-lb="mansao" data-src="img/obras/mansao-05.webp" data-leg="Mansão Costa Verde · área gourmet"><img src="img/obras/mansao-05-s.webp" srcset="img/obras/mansao-05-s.webp 570w, img/obras/mansao-05.webp 1126w" sizes="48vh" alt="Bancada da área gourmet com chopeira" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-06.webp" data-leg="Mansão Costa Verde · área gourmet"><img src="img/obras/mansao-06-s.webp" srcset="img/obras/mansao-06-s.webp 570w, img/obras/mansao-06.webp 1126w" sizes="48vh" alt="Banco de madeira na área gourmet" width="570" height="760" loading="lazy"></button>
+
+      <div class="m-cap"><b>04</b><h4>Reforma completa</h4><p>Com os projetos prontos, o cliente também fechou toda a reforma, que incluía material, mão de obra, marcenaria e todo o acompanhamento.</p></div>
+
+      <button class="m-foto baixa" type="button" data-lb="mansao" data-src="img/obras/mansao-07.webp" data-leg="Mansão Costa Verde · banheiro"><img src="img/obras/mansao-07-s.webp" srcset="img/obras/mansao-07-s.webp 570w, img/obras/mansao-07.webp 1126w" sizes="48vh" alt="Banheiro com revestimento de madeira e box de vidro" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-08.webp" data-leg="Mansão Costa Verde · suíte"><img src="img/obras/mansao-08-s.webp" srcset="img/obras/mansao-08-s.webp 570w, img/obras/mansao-08.webp 1126w" sizes="48vh" alt="Suíte com painel ripado" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto baixa" type="button" data-lb="mansao" data-src="img/obras/mansao-09.webp" data-leg="Mansão Costa Verde · banheiro da suíte"><img src="img/obras/mansao-09-s.webp" srcset="img/obras/mansao-09-s.webp 570w, img/obras/mansao-09.webp 1126w" sizes="48vh" alt="Bancada dupla no banheiro da suíte" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto alta" type="button" data-lb="mansao" data-src="img/obras/mansao-10.webp" data-leg="Mansão Costa Verde · banheira"><img src="img/obras/mansao-10-s.webp" srcset="img/obras/mansao-10-s.webp 570w, img/obras/mansao-10.webp 1126w" sizes="48vh" alt="Banheira de hidromassagem" width="570" height="760" loading="lazy"></button>
+      <button class="m-foto baixa" type="button" data-lb="mansao" data-src="img/obras/mansao-11.webp" data-leg="Mansão Costa Verde · piscina"><img src="img/obras/mansao-11-s.webp" srcset="img/obras/mansao-11-s.webp 570w, img/obras/mansao-11.webp 1126w" sizes="48vh" alt="A casa vista da piscina" width="570" height="760" loading="lazy"></button>
+
+      <div class="m-fim">
+        <p>Todas as etapas foram de nossa responsabilidade.</p>
+        <a class="btn btn-linha" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vi%20a%20Mans%C3%A3o%20Costa%20Verde%20no%20site%20e%20quero%20conversar%20sobre%20a%20minha%20obra." target="_blank" rel="noopener">Quero uma obra assim</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nutrifofo: o projeto e a entrega, lado a lado -->
+<section class="sec papel nutri" id="nutrifofo">
+  <div class="nutri-topo">
+    <div class="nutri-sete rev" aria-hidden="true">
+      <span>7</span>
+      <div class="cota"><i></i><b>dias · Carnaval de 2021</b><i></i></div>
+    </div>
+    <div class="nutri-txt">
+      <p class="sobrelinha">Obra 02 <span>Projeto e reforma comercial</span></p>
+      <h3 class="rev">Um consultório inteiro <em>em 7 dias.</em></h3>
+      <p class="rev">Em um desafio durante o Carnaval de 2021, projetamos e reformamos o consultório do nutricionista Thiago Monteiro, o @nutrifofo, em apenas 7 dias. Enquanto ele aproveitava as férias, nossa equipe trabalhou para que tudo estivesse pronto no retorno.</p>
+      <p class="rev">Depois do consultório, a parceria cresceu: projetamos e reformamos o apartamento dele e, mais recentemente, o quarto do pequeno Antônio.</p>
+    </div>
+  </div>
+
+  <div class="compara-bloco rev">
+    <div class="compara-abas" role="tablist" aria-label="Ambiente">
+      <button type="button" role="tab" aria-selected="true" data-par="1">Consultório</button>
+      <button type="button" role="tab" aria-selected="false" data-par="2">Recepção</button>
+    </div>
+    <div class="compara" id="compara" style="--p:50%">
+      <img class="compara-depois" id="compDepois" src="img/obras/nutri-entregue-1.webp" alt="Consultório entregue, em foto" width="1290" height="1258" loading="lazy">
+      <div class="compara-antes"><img id="compAntes" src="img/obras/nutri-projeto-1.webp" alt="Consultório no projeto 3D" width="1000" height="564" loading="lazy"></div>
+      <span class="compara-tag t-antes">O que desenhamos</span>
+      <span class="compara-tag t-depois">O que entregamos</span>
+      <div class="compara-fio" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></i></div>
+      <input class="compara-range" id="compRange" type="range" min="0" max="100" value="50" aria-label="Comparar o projeto com a obra entregue">
+    </div>
+    <p class="compara-nota">Arraste para comparar o projeto 3D com a foto da entrega.</p>
+  </div>
+</section>
+
+<!-- A casa em três momentos -->
+<section class="sec casa" id="casa">
+  <div class="casa-topo">
+    <p class="sobrelinha">Obra 03 <span>Construção</span></p>
+    <h3 class="rev">Antes, durante <em>e depois.</em></h3>
+    <p class="rev">A mesma casa em três momentos: como encontramos, no meio da obra e no dia da entrega.</p>
+  </div>
+  <div class="casa-grade">
+    <ol class="casa-tempo rev">
+      <li><img src="img/obras/casa-antes.webp" alt="A casa antes da obra" width="346" height="345" loading="lazy"><span>Como estava</span></li>
+      <li><img src="img/obras/casa-durante.webp" alt="A casa durante a obra, com a estrutura aparente" width="346" height="345" loading="lazy"><span>Estrutura e alvenaria</span></li>
+      <li><img src="img/obras/casa-depois.webp" alt="A casa depois da obra" width="346" height="345" loading="lazy"><span>Entregue</span></li>
+    </ol>
+    <div class="casa-entrega rev">
+      <button class="casa-grande" type="button" id="casaGrande" data-lba="casa" data-src="img/obras/casa-01.webp" data-leg="Casa entregue · fachada"><img src="img/obras/casa-01.webp" alt="Fachada da casa entregue" width="1126" height="1500" loading="lazy"></button>
+      <div class="casa-minis" id="casaMinis">
+        <button type="button" class="ativa" data-lbi="casa" data-src="img/obras/casa-01.webp" data-leg="Casa entregue · fachada"><img src="img/obras/casa-01-s.webp" alt="Fachada" width="570" height="760" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-02.webp" data-leg="Casa entregue · lateral"><img src="img/obras/casa-02-s.webp" alt="Lateral da casa" width="570" height="760" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-03.webp" data-leg="Casa entregue · cozinha"><img src="img/obras/casa-03-s.webp" alt="Cozinha com ilha" width="760" height="570" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-04.webp" data-leg="Casa entregue · cozinha"><img src="img/obras/casa-04-s.webp" alt="Ilha da cozinha" width="570" height="760" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-05.webp" data-leg="Casa entregue · marcenaria"><img src="img/obras/casa-05-s.webp" alt="Estante com nicho iluminado" width="570" height="760" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-06.webp" data-leg="Casa entregue · banheiro"><img src="img/obras/casa-06-s.webp" alt="Bancada do banheiro com luz embutida" width="570" height="760" loading="lazy"></button>
+        <button type="button" data-lbi="casa" data-src="img/obras/casa-07.webp" data-leg="Casa entregue · iluminação"><img src="img/obras/casa-07-s.webp" alt="Luminária em onda no teto" width="570" height="760" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFÓLIO ============ -->
+<section class="sec port" id="portfolio">
+  <header class="prancha"><b>04</b><span>Portfólio</span><i></i><span>Projetos e obras prontas</span></header>
+  <div class="port-topo">
+    <h2 class="titulo rev">Cada projeto é uma história contada em <em>concreto, luz e emoção.</em></h2>
+    <p class="rev">Nossos projetos refletem o estilo de vida dos nossos clientes: famílias que valorizam conforto, sofisticação e praticidade. De apartamentos urbanos a projetos comerciais, cada espaço carrega um propósito.</p>
+  </div>
+  <div class="port-filtros" id="portFiltros" role="group" aria-label="Filtrar por ambiente"></div>
+  <div class="port-grade" id="portGrade"></div>
+  <button class="btn btn-linha port-mais" id="portMais" type="button">Mostrar mais</button>
+  <p class="port-nota"><span class="selo s-p">Projeto 3D</span> é imagem do projeto. <span class="selo s-f">Obra entregue</span> é foto do que foi construído.</p>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="sec sobre" id="sobre">
+  <header class="prancha"><b>05</b><span>Sobre nós</span><i></i><span>Os fundadores</span></header>
+  <div class="sobre-topo">
+    <h2 class="titulo rev">Três profissionais que decidiram transformar <em>a forma de construir.</em></h2>
+    <div class="sobre-txt rev">
+      <p>A Obra de Cora nasceu do desejo de unir o que o mercado separava: projeto, obra e gestão.</p>
+      <p>Depois de anos atuando em diferentes áreas da construção civil, Pedro, Bia e Vitor entenderam que os clientes buscavam mais do que uma reforma ou uma casa nova. Queriam tranquilidade, confiança e um resultado que fizesse sentido para suas vidas.</p>
+    </div>
+  </div>
+
+  <div class="trio">
+    <article class="socio rev">
+      <div class="socio-foto"><img src="img/equipe/pedro.webp" alt="Pedro, Diretor de Obras" width="546" height="820" loading="lazy"></div>
+      <p class="socio-cargo">Diretor de Obras</p>
+      <h3>Pedro</h3>
+      <p>Com um olhar técnico e uma gestão rigorosa, é o responsável por transformar o planejamento em execução. Sua experiência em gerenciamento garante que cada detalhe aconteça no tempo certo, com segurança, eficiência e qualidade.</p>
+    </article>
+    <article class="socio rev">
+      <div class="socio-foto"><img src="img/equipe/bia.webp" alt="Bia, Diretora de Projetos" width="546" height="820" loading="lazy"></div>
+      <p class="socio-cargo">Diretora de Projetos</p>
+      <h3>Bia</h3>
+      <p>Responsável por traduzir sonhos em traços e volumes, é o olhar criativo da Obra de Cora. Sua sensibilidade transforma desejos em espaços harmônicos, funcionais e cheios de significado.</p>
+    </article>
+    <article class="socio rev">
+      <div class="socio-foto"><img src="img/equipe/vitor.webp" alt="Vitor, Diretor Executivo" width="546" height="820" loading="lazy"></div>
+      <p class="socio-cargo">Diretor Executivo</p>
+      <h3>Vitor</h3>
+      <p>À frente da gestão da empresa, conecta pessoas, processos e propósitos. É ele quem garante que a experiência do cliente seja fluida, transparente e verdadeiramente acolhedora.</p>
+    </article>
+  </div>
+
+  <p class="sobre-fecho rev">Juntos, formam um trio que une <em>razão e emoção</em>, técnica e sensibilidade, para construir <em>lares com alma.</em></p>
+
+  <dl class="credo rev">
+    <div><dt>Propósito</dt><dd>Levar uma experiência única na construção do seu lar.</dd></div>
+    <div><dt>Missão</dt><dd>Oferecer segurança e personalização em nossas obras.</dd></div>
+    <div><dt>Valores</dt><dd>Integridade, confiança e respeito.</dd></div>
+  </dl>
+</section>
+
+<!-- ============ AVALIAÇÕES ============ -->
+<section class="sec papel aval" id="avaliacoes">
+  <header class="prancha"><b>06</b><span>Avaliações</span><i></i><span>Cinco estrelas no Google</span></header>
+  <div class="aval-topo">
+    <h2 class="titulo rev">Quem construiu com a gente <em>conta como foi.</em></h2>
+    <div class="aval-nav">
+      <button type="button" id="avalAnt" aria-label="Avaliação anterior"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button type="button" id="avalProx" aria-label="Próxima avaliação"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <div class="aval-trilho" id="avalTrilho" tabindex="0" aria-label="Avaliações de clientes">
+    <blockquote class="depo"><p>Isso não é uma empresa, é uma fábrica de sonhos! Bia e equipe conseguem captar o que não conseguimos colocar em palavras e entregam o extraordinário!</p></blockquote>
+    <blockquote class="depo"><p>Excelente empresa! Profissionais extremamente competentes, criativos e atenciosos. O projeto ficou impecável, com cada detalhe pensado com muito bom gosto e funcionalidade. Superou todas as minhas expectativas!</p></blockquote>
+    <blockquote class="depo"><p>Melhor experiência de obra! Encontrei pelo Instagram, sem indicação, mas foi incrível. Ficou excelente a reforma da cozinha. Toda a equipe nota dez, desde o primeiro atendimento até o final da obra.</p></blockquote>
+    <blockquote class="depo"><p>Empresa de excelência, com profissionais preparados e experientes! Projeto e obra sem dor de cabeça! Super recomendo!</p></blockquote>
+    <blockquote class="depo"><p>Excelente em todos os sentidos. Cumpriu tudo que foi acordado, desde o primeiro contato até o prazo final.</p></blockquote>
+    <blockquote class="depo"><p>Excelente serviço. Profissionais qualificados e atentos para as condições, necessidades, sonhos e desejos dos seus clientes. Super indico.</p></blockquote>
+    <blockquote class="depo"><p>Recomendo muito a equipe. Bia sempre me atende com muito carinho, atenção e profissionalismo quando preciso. Excelente parceria!</p></blockquote>
+    <blockquote class="depo"><p>Minha experiência com essa equipe foi maravilhosa. Eu super indico, trabalho de excelência.</p></blockquote>
+  </div>
+  <a class="btn btn-linha-escura aval-link" href="https://share.google/dRPr2BFiibpWeqie5" target="_blank" rel="noopener">Ver avaliações no Google</a>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="sec areia contato" id="contato">
+  <header class="prancha"><b>07</b><span>Contato</span><i></i><span>Rio de Janeiro</span></header>
+  <div class="contato-grade">
+    <div class="contato-txt">
+      <h2 class="titulo rev">Vamos construir <em>algo juntos?</em></h2>
+      <p class="rev">Se você busca uma experiência completa, com planejamento, execução e acompanhamento de cada detalhe, a Obra de Cora é o seu lugar.</p>
+      <p class="contato-frase rev">Preferimos ouvir sua história antes de desenhar qualquer projeto.</p>
+      <dl class="contato-dados rev">
+        <div><dt>Atendimento</dt><dd>Rio de Janeiro<br>Zona Sul, Barra da Tijuca e Recreio</dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5521983608787" target="_blank" rel="noopener">(21) 98360-8787</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/obradecora_/" target="_blank" rel="noopener">@obradecora_</a></dd></div>
+      </dl>
+    </div>
+
+    <form class="form rev" id="form" novalidate>
+      <div class="campo">
+        <label for="fNome">Nome completo</label>
+        <input id="fNome" name="nome" type="text" autocomplete="name" required>
+      </div>
+      <div class="campo-par">
+        <div class="campo">
+          <label for="fTel">Telefone</label>
+          <input id="fTel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(21) 90000-0000" required>
+        </div>
+        <div class="campo">
+          <label for="fMail">E-mail</label>
+          <input id="fMail" name="email" type="email" autocomplete="email">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="fLocal">Local do imóvel</label>
+        <input id="fLocal" name="local" type="text" placeholder="Bairro e cidade" autocomplete="address-level2">
+      </div>
+      <fieldset class="campo">
+        <legend>O que deseja fazer</legend>
+        <div class="chips">
+          <label><input type="checkbox" name="desejo" value="Projeto de arquitetura"><span>Projeto de arquitetura</span></label>
+          <label><input type="checkbox" name="desejo" value="Design de interiores"><span>Design de interiores</span></label>
+          <label><input type="checkbox" name="desejo" value="Reforma"><span>Reforma</span></label>
+          <label><input type="checkbox" name="desejo" value="Construção"><span>Construção</span></label>
+          <label><input type="checkbox" name="desejo" value="Móveis planejados"><span>Móveis planejados</span></label>
+          <label><input type="checkbox" name="desejo" value="Consultoria técnica"><span>Consultoria técnica</span></label>
+        </div>
+      </fieldset>
+      <div class="campo">
+        <label for="fMsg">Mensagem adicional</label>
+        <textarea id="fMsg" name="mensagem" rows="3"></textarea>
+      </div>
+      <p class="form-erro" id="formErro" role="alert" hidden>Preencha nome e telefone para a gente conseguir responder.</p>
+      <button class="btn btn-tinta" type="submit">Enviar pelo WhatsApp <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="form-nota">Ao enviar, o WhatsApp abre com a sua mensagem pronta. É só confirmar.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="rodape">
+  <div class="rodape-topo">
+    <a class="marca" href="#inicio" aria-label="Obra de Cora, voltar ao início">
+      <img class="marca-icone" src="img/marca/icone.webp" alt="" width="1054" height="490" loading="lazy">
+      <img class="marca-nome" src="img/marca/logotipo.webp" alt="Obra de Cora" width="710" height="88" loading="lazy">
+    </a>
+    <p class="rodape-lema">Do projeto à execução,<br><em>a mesma equipe.</em></p>
+  </div>
+  <div class="rodape-base">
+    <nav aria-label="Rodapé">
+      <a href="#servicos">Serviços</a><a href="#obras">Obras</a><a href="#portfolio">Portfólio</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </nav>
+    <div class="rodape-redes">
+      <a href="https://www.instagram.com/obradecora_/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/5521983608787" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="rodape-legal"><span>© <span id="ano">2026</span> Obra de Cora. Todos os direitos reservados.</span><span>Site por Geada Tech</span></p>
+  </div>
+</footer>
+
+<a class="zap" id="zap" href="https://wa.me/5521983608787?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.500-2c1.900 1 4.100 1.600 6.400 1.600 7.200 0 13-5.700 13-12.800S23.200 3 16 3zm0 23.300c-2.100 0-4.100-.6-5.800-1.700l-.400-.2-3.900 1.200 1.200-3.800-.300-.400a10.300 10.300 0 0 1-1.600-5.600C5.200 10 10 5.300 16 5.300S26.800 10 26.800 15.800 22 26.300 16 26.300zm5.900-7.800c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.700.2-.2.300-.800 1-1 1.200-.2.200-.4.200-.700.1-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.700l.500-.6c.2-.2.200-.3.300-.5.100-.2.100-.4 0-.6l-1-2.400c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 2.700 1.100 3.200.9 3.800.8.600-.1 1.900-.8 2.100-1.500.3-.7.3-1.400.2-1.500-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<!-- visor de fotos -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button class="lb-x" type="button" id="lbX" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-seta lb-ant" type="button" id="lbAnt" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <figure class="lb-fig"><img id="lbImg" alt=""><figcaption><span id="lbLeg"></span><b id="lbCont"></b></figcaption></figure>
+  <button class="lb-seta lb-prox" type="button" id="lbProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+
+<script src="js/cena.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
