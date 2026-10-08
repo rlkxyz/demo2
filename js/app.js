@@ -176,7 +176,9 @@ function fraseAtualiza() {
 const servItens = $$('#servLista li');
 const servFotos = $$('#servVitrine img');
 const servNum = $('#servNum');
+let servAtual = 0;
 function servico(i) {
+  servAtual = i;
   servItens.forEach((li, k) => li.classList.toggle('ativa', k === i));
   servFotos.forEach((im, k) => im.classList.toggle('ativa', k === i));
   servNum.textContent = String(i + 1).padStart(2, '0');
@@ -187,6 +189,29 @@ servItens.forEach((li, i) => {
   li.addEventListener('focus', () => servico(i));
   li.addEventListener('click', () => servico(i));
 });
+
+/* Em tela de toque não tem mouse pra passar por cima. Ali a foto fica
+   presa no alto e o item que cruza a linha de leitura vira o ativo. */
+const servVitrine = $('#servVitrine'), servLista = $('#servLista');
+const semMouse = matchMedia('(hover: none)').matches;
+function servAtualiza() {
+  const estreita = innerWidth <= 860;
+  if (!semMouse && !estreita) return;
+  const l = servLista.getBoundingClientRect();
+  if (l.bottom < 0 || l.top > innerHeight) return;
+  let linha = innerHeight * 0.45;
+  if (estreita) {
+    const chao = Math.max(0, servVitrine.getBoundingClientRect().bottom);
+    linha = chao + (innerHeight - chao) * 0.32;
+  }
+  let melhor = 0, menor = Infinity;
+  servItens.forEach((li, i) => {
+    const r = li.getBoundingClientRect();
+    const d = Math.abs((r.top + r.bottom) / 2 - linha);
+    if (d < menor) { menor = d; melhor = i; }
+  });
+  if (melhor !== servAtual) servico(melhor);
+}
 
 /* ---------- Mansão Costa Verde: scroll vertical vira horizontal ---------- */
 const mansao = $('#mansao');
@@ -231,7 +256,24 @@ const PARES = {
   2: ['img/obras/nutri-projeto-2.webp', 'Recepção no projeto 3D', 'img/obras/nutri-entregue-2.webp', 'Recepção entregue, em foto']
 };
 const compPoe = v => compara.style.setProperty('--p', v + '%');
-compRange.addEventListener('input', () => compPoe(compRange.value));
+/* O arrasto é feito aqui e não pelo range, porque no celular o range só
+   anda se o dedo pegar bem em cima da bolinha dele. O range fica pra
+   quem usa teclado. */
+let compArrasta = false, compMexeu = false;
+const compDeX = x => {
+  const r = compara.getBoundingClientRect();
+  const v = clamp((x - r.left) / r.width) * 100;
+  compRange.value = v;
+  compPoe(v);
+};
+compara.addEventListener('pointerdown', e => {
+  compArrasta = compMexeu = true;
+  compara.setPointerCapture(e.pointerId);
+  compDeX(e.clientX);
+});
+compara.addEventListener('pointermove', e => { if (compArrasta) compDeX(e.clientX); });
+['pointerup', 'pointercancel'].forEach(ev => compara.addEventListener(ev, () => { compArrasta = false; }));
+compRange.addEventListener('input', () => { compMexeu = true; compPoe(compRange.value); });
 $$('.compara-abas button').forEach(b => b.addEventListener('click', () => {
   $$('.compara-abas button').forEach(o => o.setAttribute('aria-selected', o === b));
   const [a, altA, d, altD] = PARES[b.dataset.par];
@@ -248,7 +290,8 @@ if ('IntersectionObserver' in window && !REDUZIDO) {
     const ini = performance.now();
     const passo = agora => {
       const k = (agora - ini) / 1700;
-      if (k >= 1 || compRange.matches(':active')) { compPoe(compRange.value); return; }
+      if (compMexeu) return;
+      if (k >= 1) { compPoe(compRange.value); return; }
       compPoe(50 + Math.sin(k * Math.PI * 2) * 16 * (1 - k));
       requestAnimationFrame(passo);
     };
@@ -473,6 +516,7 @@ function quadro() {
   const t = constrAtualiza();
   topoAtualiza(t);
   fraseAtualiza();
+  servAtualiza();
   mansaoAtualiza();
 }
 const pede = () => { if (!pedido) { pedido = true; requestAnimationFrame(quadro); } };
